@@ -63,6 +63,8 @@ class MsvTemplate(PackageTemplate):
 			template.list_entry = PKIWI_MSV1_0_LIST_63
 		
 		elif sysinfo.buildnumber < WindowsBuild.WIN_11_25H2.value:
+			# Two extra PVOIDs (unk_24h2_0, unk_24h2_1) precede UserName in this build range.
+			# Mirrors mimikatz KIWI_MSV1_0_LIST_64 (gentilkiwi/mimikatz, mimikatz/modules/sekurlsa/kuhl_m_sekurlsa_utils.h).
 			template.list_entry = PKIWI_MSV1_0_LIST_65
 
 		else:
